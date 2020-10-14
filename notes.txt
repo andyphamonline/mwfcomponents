@@ -1,0 +1,44 @@
+- padding: pad-2x, pad-3x, pad-6x, pad-12x (4px, 12px, 24px, 48px??)
+- grid support:
+  - 12 columns
+  - 5 columns: col-1-5
+  - 8 columns: col-1-8
+- use stack values on parent container: stack-2, stack-3, stack-4, stack-5
+- use factory pattern to initialize component anytime
+- adding JS: https://www.microsoft.com/en-us/mwf/getting-started/building/adding-javascript
+  - global namespace, AMD, CommonJS
+  - auto init version
+  - standard version
+    - mwf.ComponentFactory.Create([{
+      'component': Carousel,
+      selector: '#myCarousel',
+      eventToBind: DOMContentLoaded || load,
+      elements: [this.myCarousel], // to create component for an existing element
+      callback: callBackFunction
+    }])
+- theme:
+  - page theme:
+    - default: white background with black text
+    - alternative: black background with white text
+  - content theme:
+    - theme-light: white background with black text
+    - theme-dark: black background with white text
+- input:
+  - input must have label. The 'for' attribute is the id of the input
+  - input must have attributes: id, name, aria-describedby
+  - requried input must have attribute 'required', 'aria-required', * at the end of text for visual user
+  - attribute type='email' will automatically have regular expression to validate against email
+  - use attribute pattern='' to validate against custom regular expression
+- Utility selectors:
+  - x-clearfix, x-float-left, x-float-right
+  - x-offset-content: to use with component
+  - x-offset-uhf: to align content with UHF
+  - x-hidden, x-visible-block, x-visible-inline-block, x-visible-inline
+    - i.e. x-hidden-vp1 (hidden at vp < 320px), x-visible-vp1-block, x-visible-vp1-inline-block, x-visible-vp1-inline
+  - f-lean: reduce top spacing. Work with these classes: c-heading-1, c-heading-2, c-heading-3, c-heading-4, c-heading-5, c-heading-6, c-list, c-paragraph, c-universal-header, m-image, m-highlight-feature, m-tracklist
+  - x-type-left, x-type-center, x-type-right
+  - x-screen-reader: remove content from the view but available for screen reader
+- toggle play/pause button
+  <button class="c-action-toggle c-glyph glyph-play f-toggle" data-toggled-label="Pause" data-toggled-glyph="glyph-pause" aria-label="Play" data-f-describedby="glyphOnlyPause"></button>
+  <span id="glyphOnlyPause" class="c-tooltip" role="tooltip" aria-hidden="true">Pause</span>
+- to build CDN: https://www.microsoft.com/en-us/mwf/documentation/distribution-deployment/overview
