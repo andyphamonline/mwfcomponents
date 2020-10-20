@@ -1,27 +1,13 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 
-const getMinWidthFromViewPort = (viewPort: number): string => {
-	switch (viewPort) {
-		case 1:
-			return '0'
-			break
-		case 2:
-			return '540'
-			break
-		case 3:
-			return '768'
-			break
-		case 4:
-			return '1084'
-			break
-		case 5:
-			return '1400'
-			break
-		case 6:
-			return '1779'
-			break
-	}
+enum ViewPort {
+	'1' = '0',
+	'2' = '540',
+	'3' = '768',
+	'4' = '1084',
+	'5' = '1400',
+	'6' = '1779',
 }
 
 export const Image = (props) => {
@@ -33,7 +19,7 @@ export const Image = (props) => {
 				<source
 					key={source.viewPort}
 					srcSet={source.src}
-					media={`(min-width: ${getMinWidthFromViewPort(source.viewPort)}px)`}
+					media={`(min-width: ${ViewPort[source.viewPort]}px)`}
 				/>
 			))}
 			<img
