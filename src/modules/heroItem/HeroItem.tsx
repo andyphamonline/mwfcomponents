@@ -3,6 +3,7 @@ import PropTypes from 'prop-types'
 import styled from 'styled-components'
 import { Image } from '../../components/image/Image'
 import { Price } from '../../components/price/Price'
+import { CTA } from '../../components/cta/CTA'
 
 // custom CSS if needed
 const HeroItemWrapper = styled.div``
@@ -30,6 +31,21 @@ export const HeroItem = (props) => {
 		if (data.price?.price) return <Price data={data.price}></Price>
 	}
 
+	const renderCTA = () => {
+		if (data.callToActions?.length) {
+			const multipleCTAClass: string =
+				data.callToActions.length > 1 ? 'c-group' : ''
+
+			return (
+				<div class={multipleCTAClass}>
+					{data.callToActions.map((cta, index) => (
+						<CTA key={index} data={cta}></CTA>
+					))}
+				</div>
+			)
+		}
+	}
+
 	return (
 		<HeroItemWrapper>
 			<div
@@ -42,19 +58,8 @@ export const HeroItem = (props) => {
 					<div>
 						<h1 className={data.heading.className}>{data.heading.title}</h1>
 						{renderSubHeading()}
-
 						{renderPrice()}
-
-						<div>
-							{data.callToActions.map((cta, index) => (
-								<a
-									key={index}
-									href={cta.href}
-									className="c-call-to-action c-glyph">
-									<span>{cta.title}</span>
-								</a>
-							))}
-						</div>
+						{renderCTA()}
 					</div>
 				</div>
 			</div>
