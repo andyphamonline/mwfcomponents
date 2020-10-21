@@ -2,7 +2,9 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import styled from 'styled-components'
 import { Image } from '../../components/image/Image'
+import { Price } from '../../components/price/Price'
 
+// custom CSS if needed
 const HeroItemWrapper = styled.div``
 
 export const HeroItem = (props) => {
@@ -17,6 +19,17 @@ export const HeroItem = (props) => {
 	const context: string = data.context ? `context-${data.context}` : ''
 	const theme: string = data.theme ? `theme-${data.theme}` : ''
 
+	const renderSubHeading = () => {
+		if (data.subHeading?.title)
+			return (
+				<p className={data.subHeading.className}>{data.subHeading.title}</p>
+			)
+	}
+
+	const renderPrice = () => {
+		if (data.price?.price) return <Price data={data.price}></Price>
+	}
+
 	return (
 		<HeroItemWrapper>
 			<div
@@ -28,17 +41,10 @@ export const HeroItem = (props) => {
 				<div>
 					<div>
 						<h1 className={data.heading.className}>{data.heading.title}</h1>
-						<p className={data.subHeading.className}>{data.subHeading.title}</p>
-						<div
-							className="c-price"
-							itemProp="offers"
-							itemScope=""
-							itemType="https://schema.org/Offer">
-							<meta itemProp="priceCurrency" content={data.price.currency} />
-							<span>{data.price.currencySymbol}</span>
-							<span itemProp="price">{data.price.price}</span>
-							<link itemProp="availability" href="https://schema.org/InStock" />
-						</div>
+						{renderSubHeading()}
+
+						{renderPrice()}
+
 						<div>
 							{data.callToActions.map((cta, index) => (
 								<a

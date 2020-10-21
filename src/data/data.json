@@ -72,11 +72,7 @@
 					"className": "c-subheading",
 					"title": "Subheading"
 				},
-				"price": {
-					"currency": "USD",
-					"currencySymbol": "$",
-					"price": 100
-				},
+
 				"callToActions": [
 					{
 						"href": "#",
