@@ -2,6 +2,7 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import styled from 'styled-components'
 import { Image } from '../../components/image/Image'
+import { Video } from '../../components/video/Video'
 import { Price } from '../../components/price/Price'
 import { CTA } from '../../components/cta/CTA'
 
@@ -18,7 +19,20 @@ export const HeroItem = (props) => {
 		: ''
 	const mask: string = data.mask ? `f-mask-${data.mask}` : ''
 	const context: string = data.context ? `context-${data.context}` : ''
+	const transparent: string = data.transparent ? 'f-transparent' : ''
 	const theme: string = data.theme ? `theme-${data.theme}` : ''
+
+	const renderMedia = () => {
+		if (data.isVideoModule) {
+			return (
+				<div class="m-ambient-video">
+					<Video data={data.video} />
+				</div>
+			)
+		} else {
+			return <Image data={data.image} />
+		}
+	}
 
 	const renderSubHeading = () => {
 		if (data.subHeading?.title)
@@ -49,11 +63,12 @@ export const HeroItem = (props) => {
 	return (
 		<HeroItemWrapper>
 			<div
-				className={`m-hero-item ${horizontalPosition} ${verticalPosition} ${mask} ${context} ${theme}`}
+				className={`m-hero-item ${horizontalPosition} ${verticalPosition} ${mask} ${context} ${transparent} ${theme}`}
 				itemScope=""
 				itemType="https://schema.org/Product"
 				role="tabpanel">
-				<Image data={data.image} />
+				{renderMedia()}
+
 				<div>
 					<div>
 						<h1 className={data.heading.className}>{data.heading.title}</h1>

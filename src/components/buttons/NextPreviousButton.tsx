@@ -2,9 +2,9 @@ import React from 'react'
 import PropTypes from 'prop-types'
 
 export const NextPreviousButton = (props) => {
+	const data = props.data
 	const chevronDirection: string =
-		props.chevronDirection === 'previous' ? 'f-previous' : 'f-next'
-	const ariaLabel: string = props.ariaLabel
+		data.direction === 'previous' ? 'f-previous' : 'f-next'
 
 	return (
 		<button
@@ -12,11 +12,10 @@ export const NextPreviousButton = (props) => {
 			role="presentation"
 			tabIndex="0"
 			className={`c-flipper ${chevronDirection}`}
-			aria-label={ariaLabel}></button>
+			aria-label={data.ariaLabel}></button>
 	)
 }
 
 NextPreviousButton.propTypes = {
-	class: PropTypes.string,
-	ariaLabel: PropTypes.string,
+	data: PropTypes.object,
 }

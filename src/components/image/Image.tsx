@@ -25,7 +25,7 @@ export const Image = (props) => {
 			<img
 				srcSet={data.source[0].src}
 				src={data.source[0].src}
-				alt={data.altText}
+				alt={data.alt}
 			/>
 		</picture>
 	)

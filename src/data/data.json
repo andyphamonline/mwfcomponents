@@ -3,20 +3,22 @@
 		"autoPlay": true,
 		"ariaLabel": "Hero aria label",
 		"isFullBleed": false,
+		"theme": "light",
 		"sequenceIndicatorButtons": [
 			{
-				"id": "slideOneId",
 				"ariaLabel": "View slide One aria label",
 				"tooltipId": "tooltipOneId",
 				"title": "Slide One"
 			},
 			{
-				"id": "slideTwoId",
 				"ariaLabel": "View slide Two aria label",
 				"tooltipId": "tooltipTwoId",
 				"title": "Slide Two"
 			}
 		],
+		"playPauseButton": {
+			"ariaLabel": "Play pause button aria label"
+		},
 		"nextPreviousButtons": [
 			{
 				"direction": "previous",
@@ -29,38 +31,32 @@
 		],
 		"heroItems": [
 			{
-				"id": "heroItemOne",
+				"isVideoModule": true,
 				"theme": "dark",
 				"horizontalPosition": "left",
 				"verticalPosition": "top",
 				"context": "accessory",
+				"transparent": true,
 				"mask": 20,
-				"image": {
-					"altText": "Hero Item image One alt text",
+				"video": {
+					"ariaLabel": "ambient video",
+					"alt": "ambient video alt text",
+					"posterImage": "//statics-marketingsites-wcus-ms-com.akamaized.net/_h/mwfhash2/mwf.app/images/components/ambient-video/ambient-example-1.png",
+					"muted": true,
+					"autoplay": false,
+					"loop": false,
 					"source": [
 						{
-							"src": "https://placehold.it/1600x600",
-							"viewPort": 6
+							"src": "//statics-marketingsites-wcus-ms-com.akamaized.net/_h/mwfhash2/mwf.app/images/components/ambient-video/ambient-example-1.mp4",
+							"type": "video/mp4"
 						},
 						{
-							"src": "https://placehold.it/1600x600",
-							"viewPort": 5
+							"src": "//statics-marketingsites-wcus-ms-com.akamaized.net/_h/mwfhash2/mwf.app/images/components/ambient-video/ambient-example-1.webm",
+							"type": "video/webm"
 						},
 						{
-							"src": "https://placehold.it/1259x472",
-							"viewPort": 4
-						},
-						{
-							"src": "https://placehold.it/1083x609",
-							"viewPort": 3
-						},
-						{
-							"src": "https://placehold.it/767x431",
-							"viewPort": 2
-						},
-						{
-							"src": "https://placehold.it/539x303",
-							"viewPort": 1
+							"src": "//statics-marketingsites-wcus-ms-com.akamaized.net/_h/mwfhash2/mwf.app/images/components/ambient-video/ambient-example-1.ogg",
+							"type": "video/ogg"
 						}
 					]
 				},
@@ -89,13 +85,12 @@
 				]
 			},
 			{
-				"id": "heroItemTwo",
 				"theme": "dark",
 				"horizontalPosition": "center",
 				"verticalPosition": "center",
 				"context": "accessory",
 				"image": {
-					"altText": "Hero Item image Two alt text",
+					"alt": "Hero Item image Two alt text",
 					"source": [
 						{
 							"src": "https://placehold.it/1600x600",

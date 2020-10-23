@@ -1,3 +1,9 @@
+***HERO:
+- either has video or image
+- image ratio class?
+- click-thru CTA class?
+
+***MWF:
 - padding: pad-2x, pad-3x, pad-6x, pad-12x (4px, 12px, 24px, 48px??)
 - grid support:
   - 12 columns
@@ -43,6 +49,3 @@
   <span id="glyphOnlyPause" class="c-tooltip" role="tooltip" aria-hidden="true">Pause</span>
 - to build CDN: https://www.microsoft.com/en-us/mwf/documentation/distribution-deployment/overview
 
-***************HERO:
-- f-auto-play
-- data-js-interval
