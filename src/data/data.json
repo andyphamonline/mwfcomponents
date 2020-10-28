@@ -31,32 +31,39 @@
 		],
 		"heroItems": [
 			{
-				"isVideoModule": true,
+				"isVideoModule": false,
 				"theme": "dark",
 				"horizontalPosition": "left",
 				"verticalPosition": "top",
 				"context": "accessory",
-				"transparent": true,
+				"transparent": false,
 				"mask": 20,
-				"video": {
-					"ariaLabel": "ambient video",
-					"alt": "ambient video alt text",
-					"posterImage": "//statics-marketingsites-wcus-ms-com.akamaized.net/_h/mwfhash2/mwf.app/images/components/ambient-video/ambient-example-1.png",
-					"muted": true,
-					"autoplay": false,
-					"loop": false,
+				"image": {
+					"alt": "Hero Item image One alt text",
 					"source": [
 						{
-							"src": "//statics-marketingsites-wcus-ms-com.akamaized.net/_h/mwfhash2/mwf.app/images/components/ambient-video/ambient-example-1.mp4",
-							"type": "video/mp4"
+							"src": "https://placehold.it/1600x600",
+							"viewPort": 6
 						},
 						{
-							"src": "//statics-marketingsites-wcus-ms-com.akamaized.net/_h/mwfhash2/mwf.app/images/components/ambient-video/ambient-example-1.webm",
-							"type": "video/webm"
+							"src": "https://placehold.it/1600x600",
+							"viewPort": 5
 						},
 						{
-							"src": "//statics-marketingsites-wcus-ms-com.akamaized.net/_h/mwfhash2/mwf.app/images/components/ambient-video/ambient-example-1.ogg",
-							"type": "video/ogg"
+							"src": "https://placehold.it/1259x472",
+							"viewPort": 4
+						},
+						{
+							"src": "https://placehold.it/1083x609",
+							"viewPort": 3
+						},
+						{
+							"src": "https://placehold.it/767x431",
+							"viewPort": 2
+						},
+						{
+							"src": "https://placehold.it/539x303",
+							"viewPort": 1
 						}
 					]
 				},
