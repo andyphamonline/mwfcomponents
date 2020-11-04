@@ -51,7 +51,7 @@ export const HeroItem = (props) => {
 				data.callToActions.length > 1 ? 'c-group' : ''
 
 			return (
-				<div class={multipleCTAClass}>
+				<div className={multipleCTAClass}>
 					{data.callToActions.map((cta, index) => (
 						<CTA key={index} data={cta}></CTA>
 					))}

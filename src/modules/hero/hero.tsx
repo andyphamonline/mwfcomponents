@@ -37,14 +37,14 @@ export const Hero = (props) => {
 					</div>
 
 					{data.nextPreviousButtons.map((button, index) => (
-						<NextPreviousButton data={button} key={button.index} />
+						<NextPreviousButton data={button} key={index} />
 					))}
 
 					<div itemScope="" itemType="https://schema.org/ItemList">
 						<ul>
 							{data.heroItems.map((heroItem, index) => (
 								<li
-									key={heroItem.index}
+									key={index}
 									data-f-theme={heroItem.theme}
 									className={index === 0 ? 'f-active' : ''}>
 									<HeroItem data={heroItem} />

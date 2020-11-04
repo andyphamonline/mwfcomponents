@@ -1,6 +1,6 @@
 {
 	"data": {
-		"autoPlay": true,
+		"autoPlay": false,
 		"ariaLabel": "Hero aria label",
 		"isFullBleed": false,
 		"theme": "light",
