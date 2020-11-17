@@ -83,11 +83,13 @@
 				"callToActions": [
 					{
 						"href": "#",
-						"title": "CALL TO ACTION"
+						"title": "CALL TO ACTION",
+						"openNewTab": true
 					},
 					{
 						"href": "#",
-						"title": "CALL TO ACTION"
+						"title": "CALL TO ACTION",
+						"openNewTab": false
 					}
 				]
 			},
