@@ -1,8 +1,7 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 
-export const CTA = (props) => {
-	const data = props.data
+export const CTA = ({ data }) => {
 	const glyphName = data.glyphName ? `glyph-${data.glyphName}` : ''
 	const openNewTab = data.openNewTab ? '_blank' : ''
 
@@ -17,12 +16,9 @@ export const CTA = (props) => {
 }
 
 CTA.propTypes = {
-	data: PropTypes.object,
+	data: PropTypes.shape({
+		href: PropTypes.string.isRequired,
+		title: PropTypes.string.isRequired,
+		openNewTab: PropTypes.bool,
+	}),
 }
-
-// CTA.propTypes: {
-// 	data: React.PropTypes.shape({
-// 		id: React.PropTypes.number.isRequired,
-// 		title: React.PropTypes.string,
-// 	})
-// }

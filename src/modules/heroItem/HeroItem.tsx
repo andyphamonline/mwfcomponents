@@ -43,7 +43,7 @@ export const HeroItem = (props) => {
 
 	const renderPrice = () => {
 		if (data.price?.price) return <Price data={data.price}></Price>
-	}
+  }
 
 	const renderCTA = () => {
 		if (data.callToActions?.length) {
